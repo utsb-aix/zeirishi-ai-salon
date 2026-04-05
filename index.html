@@ -129,10 +129,14 @@
       flex-shrink: 0;
       display: block;
     }
-    .logo-text-img {
-      height: 42px; width: auto;
+    .logo-text-css {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #d4a843;
+      letter-spacing: 0.06em;
       flex-shrink: 0;
-      display: block;
+      white-space: nowrap;
     }
     .header-nav {
       display: flex; align-items: center; gap: 2px;
@@ -1462,16 +1466,16 @@
 <header id="top-header">
   <a href="#hero" class="header-logo">
     <img src="images/logo_cap_new.png" class="logo-cap" alt="キャップアイコン">
-    <img src="images/logo_text_gold.png" class="logo-text-img" alt="税理士AI大学">
+    <span class="logo-text-css">税理士AI大学</span>
   </a>
   <nav class="header-nav">
-    <a href="#greeting">学長ご挨拶</a>
     <a href="#concerns">サービス内容</a>
-    <a href="#concept">コンセプト</a>
-    <a href="#flow">入会後の流れ</a>
-    <a href="#seminar">特別集中講座</a>
-    <a href="#community">コミュニティ</a>
     <a href="#voices">受講者の声</a>
+    <a href="#community">コミュニティ</a>
+    <a href="#greeting">学長ご挨拶</a>
+    <a href="#concept">コンセプト</a>
+    <a href="#seminar">特別集中講座</a>
+    <a href="#flow">入会後の流れ</a>
     <a href="#pricing">料金</a>
     <a href="#faq">Q&amp;A</a>
   </nav>
@@ -1490,7 +1494,7 @@
       <span class="hero-badge-text">税理士専門 AI 実践サロン</span>
     </div>
     <h1 class="hero-title reveal reveal-delay-1">
-      5年後だと思っていたものが、<br class="br-pc">
+      5年後だと思っていたことが、<br class="br-pc">
       もう<span class="silver-big">目の前に来ています。</span>
     </h1>
 
@@ -1498,7 +1502,7 @@
     <div class="countdown-inline reveal reveal-delay-1" id="countdown-star">
       <div class="cd-line"></div>
       <div class="cd-inner">
-        <div class="cd-label">開講まで</div>
+        <div class="cd-label">無料体験の機会まで</div>
         <div class="cd-display">
           <span class="cd-ato">あと</span>
           <div class="cd-block">
@@ -1524,74 +1528,19 @@
       <span class="silver-big">一緒にやれば、<br class="br-sp">必ずできます。</span>
     </h1>
     <div class="hero-divider reveal reveal-delay-2"></div>
-    <p class="hero-sub reveal reveal-delay-2">
-      AIに不安を感じている先生方へ。<br>
-      「難しそう」「自分には早い」——<br class="br-sp">その気持ちを、丸ごと持ってきてください。
+    <p class="hero-emphasis reveal reveal-delay-2">
+      誰一人取り残さない、税理士のためのAI学びのコミュニティ。<br>
+      実務で使えるAIを、仲間とともに身につける場所です。
     </p>
-    <p class="hero-emphasis reveal reveal-delay-3">
-      理論は一切なし。当日、一緒に触ります。<br>
-      誰1人置き去りにしない、<br class="br-sp">税理士のためのAI学びのコミュニティ。
+    <p class="hero-sub reveal reveal-delay-3">
+      この学びを無料で体験できる機会をご用意しています。
     </p>
-    <a href="https://zeirishi-ai-daigaku.github.io/workshift-seminar/" target="_blank" class="btn-primary reveal reveal-delay-4">無料体験セミナーの詳細はこちら →</a>
-    <div class="hero-dates reveal reveal-delay-4">
-      <div class="hero-dates-title">全3回開催</div>
-      <div class="hero-dates-grid">
-        <div class="hero-date-item"><span class="date-num">第1回</span>4月13日（月）</div>
-        <div class="hero-date-item"><span class="date-num">第2回</span>4月20日（月）</div>
-        <div class="hero-date-item"><span class="date-num">第3回</span>5月12日（火）</div>
-      </div>
-      <div class="hero-date-note">各回 18:00〜20:00 ／ セミナー90分・質疑応答30分 ／ オンライン（Zoom）</div>
-    </div>
+    <a href="https://zeirishi-ai-daigaku.github.io/workshift-seminar/" target="_blank" class="btn-primary reveal reveal-delay-4">このコミュニティの学びを無料体験してみる →</a>
   </div>
   <div class="hero-scroll">SCROLL<div class="scroll-chevron"></div></div>
 </section>
 
-<!-- ===================== ② 学長ご挨拶 ===================== -->
-<section id="greeting">
-  <div class="container">
-    <div class="greeting-wrap">
-      <div class="greeting-photo-col reveal">
-        <div class="greeting-photo-frame">
-          <img src="images/kinoshita_portrait.jpg" alt="木下勇人 学長">
-          <span class="photo-corner tl"></span>
-          <span class="photo-corner tr"></span>
-          <span class="photo-corner bl"></span>
-          <span class="photo-corner br"></span>
-        </div>
-        <div class="greeting-badge">学長 木下 勇人</div>
-      </div>
-      <div class="greeting-content reveal reveal-delay-1">
-        <span class="section-label">学長からのご挨拶</span>
-        <div class="silver-line silver-line-left"></div>
-        <div class="greeting-name">木下 勇人</div>
-        <div class="greeting-role">税理士AI大学 学長</div>
-        <div class="greeting-text">
-          <p>私は長年、相続専門の税理士として現場に立ちながら、<span class="hl">「業界全体の生産性と価値を高めることで、中小企業をより深く支えることはできないか」</span>という問いを抱いてまいりました。</p>
-
-          <p>税理士事務所は、中小企業にとって<span class="hl">"最後の拠り所"</span>とも言える存在です。しかし、日々の業務に追われ、本来向き合うべき支援に十分な時間を割けていない現実があります。</p>
-
-          <p>当初、私はAIによって業務を効率化し、時間を取り戻すことで、本来の役割に集中できる環境を実現したいと考えていました。実際に、記帳やチェック、資料作成といった業務は着実に軽減され、AIは現場において価値発揮を後押しする存在として活躍しています。</p>
-
-          <p>その一方で、<span class="hl">AIの進化は、もはや私の想定をはるかに超える領域に入ってきました。</span>いまやAIは、単なる効率化の道具にとどまらず、税理士業務そのものの一部を担い得る段階に入りつつあります。これは大きな可能性であると同時に、これまでの延長線上にいるだけでは立ち行かなくなるという現実も示しています。</p>
-
-          <p>だからこそ今、私たちは業務を効率化するだけでなく、<span class="hl">自らの役割そのものを見つめ直し、仕事のあり方を変えていく必要があります。</span>AIに任せられる業務はAIに任せる。そのうえで私たちは、人にしかできない領域へと軸足を移していく。お客様の未来に向き合い、経営課題に寄り添い、事業の成長を支える——そうした本質的な役割に、これまで以上に力を注いでいくことが重要だと考えています。</p>
-
-          <p>AIの進化を前に、不安や戸惑いを感じている方もいらっしゃるかもしれません。私自身、決してITに精通していたわけではありません。だからこそ、誰もが現場で無理なくAIを活用し、この変化に対応できる環境が必要だと考え、本サロンを立ち上げました。本サロンでは、やさしく、現場目線で、実務にまで落とし込むことを大切にしています。同じ志を持つ仲間とともに、実践を重ねながら成長していける場でありたいと考えています。</p>
-
-          <div class="greeting-vision">
-            <p>税理士一人ひとりがAIを活用し、提供できる価値を高めていく。その積み重ねが中小企業を支え、企業の成長につながり、<span class="hl-gold">やがて社会全体を前へと動かしていく</span>——私はそう信じています。</p>
-          </div>
-
-          <p>変化は、すでに始まっています。その変化をどう捉え、どう行動するかは、私たち自身に委ねられています。</p>
-
-          <p class="greeting-closing">AIに対する不安があっても問題ありません。その不安を抱えたままでも、一歩を踏み出すことにこそ意味があります。<br>ぜひ、新たな仲間として、ともにこの変化を前向きに捉え、未来を切り拓いていきましょう。<br>皆さまのご参加を、心よりお待ちしております。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== ③ お困りのこと ===================== -->
+<!-- ===================== ② ペインポイント ===================== -->
 <section id="concerns">
   <div class="container">
     <div class="section-header">
@@ -1611,12 +1560,12 @@
     <div class="concerns-answer reveal">
       <p>そのお悩みを感じているのは、あなただけではありません。<br>
       税理士AI大学は、<strong>こうした現場のリアルな課題を持つ先生方のために</strong>設計しました。<br>
-      難しい理論は一切なし。当日、すぐに使えるAI活用を、一緒に体験します。</p>
+      難しい理論は一切なし。実務で使えるAIを、仲間とともに身につけていきます。</p>
     </div>
   </div>
 </section>
 
-<!-- ===================== ④ 解決できます ===================== -->
+<!-- ===================== ③ ソリューション（成果） ===================== -->
 <section id="solution">
   <div class="container">
     <div class="section-header">
@@ -1718,7 +1667,7 @@
   </div>
 </section>
 
-<!-- ===================== ⑤ AIツール ===================== -->
+<!-- ===================== ④ AIツール ===================== -->
 <section id="tools">
   <div class="container">
     <div class="section-header">
@@ -1738,7 +1687,7 @@
   </div>
 </section>
 
-<!-- ===================== ⑥ コミュニティ活動 ===================== -->
+<!-- ===================== ⑤ Community Life ===================== -->
 <section id="stats">
   <div class="container">
     <div class="section-header">
@@ -1826,7 +1775,89 @@
   </div>
 </section>
 
-<!-- ===================== ⑤ コンセプト ===================== -->
+<!-- ===================== ⑥ 受講者の声 ===================== -->
+<section id="voices">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Voices</span>
+      <div class="silver-line"></div>
+      <h2 class="section-title section-title-light">サロン会員様からの声</h2>
+    </div>
+    <div class="voices-grid">
+      <div class="voice-card reveal"><div class="voice-quote">"</div><div class="voice-text">今は心からAIに触れる機会を得て良かったと思ってます。5年以内にAIに適合した士業以外は市場からいなくなるレベルの進化を感じてます。きっかけを与えてくださり感謝です！</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">T.M 先生</div><div class="voice-role">税理士・40代</div></div></div></div>
+      <div class="voice-card reveal reveal-delay-1"><div class="voice-quote">"</div><div class="voice-text">そんなに深いところまでいかなくても、基礎知識とプロンプトさえあればけっこう業務に使えると実感しました。AIに置いていかれないよう、仲間の先生と一緒に学んでいきたいです。</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">K.S 先生</div><div class="voice-role">税理士・50代</div></div></div></div>
+      <div class="voice-card reveal reveal-delay-2"><div class="voice-quote">"</div><div class="voice-text">プロンプト次第で、経営分析シートがあのレベルで一瞬でできることに驚きました。付加価値の高い分野に注力できるよう時間を生み出すことが大切だと、改めて実感しています。</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">Y.H 先生</div><div class="voice-role">税理士・30代</div></div></div></div>
+      <div class="voice-card reveal reveal-delay-3"><div class="voice-quote">"</div><div class="voice-text">私の年代でAIを学ぶのは正直不安でしたが、スターターガイドに沿って自分のペースで着実に進めることができました。記帳から申告書作成までAI化して、後進に誇れる事務所を作るのが今の目標です。</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">S.H 先生</div><div class="voice-role">税理士・60代</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑦ 得られるもの ===================== -->
+<section id="community">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Community</span>
+      <div class="silver-line"></div>
+      <h2 class="section-title">このサロンで得られるもの</h2>
+      <p class="section-desc">学習は講座だけでは終わりません。仲間と一緒に研究し続けられる環境があります。</p>
+    </div>
+    <div class="community-grid">
+      <div class="community-card reveal"><div class="community-card-icon">💼</div><div class="community-card-title">新しい働き方の設計</div><div class="community-card-text">財務コンサル・節税提案・金融商品活用で、顧問先から頼られる「お金のお医者さん」へ</div></div>
+      <div class="community-card reveal reveal-delay-1"><div class="community-card-icon">🌟</div><div class="community-card-title">運営パートナーとして活躍</div><div class="community-card-text">AI活用に慣れた方には、サロン運営パートナーとして即戦力で活躍いただける機会もあります</div></div>
+      <div class="community-card reveal reveal-delay-2"><div class="community-card-icon">🔬</div><div class="community-card-title">継続的なAI研究</div><div class="community-card-text">講座が終わっても、コミュニティでAI研究・最新事例の共有は続きます。学習は終わりません</div></div>
+      <div class="community-card reveal reveal-delay-3"><div class="community-card-icon">💬</div><div class="community-card-title">先生方同士のAI活用交流</div><div class="community-card-text">税理士同士だからこそ共有できる業務特化の活用事例。Slackで毎日活発に情報交換が行われています</div></div>
+      <div class="community-card reveal reveal-delay-4"><div class="community-card-icon">🛡️</div><div class="community-card-title">何でも聞けるサポート体制</div><div class="community-card-text">「こんなこと聞いていいのか」——全部大丈夫です。むしろ細かいほど面白い。誰が何を聞いても大丈夫な空気があります</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== ⑧ 学長ご挨拶 ===================== -->
+<section id="greeting">
+  <div class="container">
+    <div class="greeting-wrap">
+      <div class="greeting-photo-col reveal">
+        <div class="greeting-photo-frame">
+          <img src="images/kinoshita_portrait.jpg" alt="木下勇人 学長">
+          <span class="photo-corner tl"></span>
+          <span class="photo-corner tr"></span>
+          <span class="photo-corner bl"></span>
+          <span class="photo-corner br"></span>
+        </div>
+        <div class="greeting-badge">学長 木下 勇人</div>
+      </div>
+      <div class="greeting-content reveal reveal-delay-1">
+        <span class="section-label">学長からのご挨拶</span>
+        <div class="silver-line silver-line-left"></div>
+        <div class="greeting-name">木下 勇人</div>
+        <div class="greeting-role">税理士AI大学 学長</div>
+        <div class="greeting-text">
+          <p>私は長年、相続専門の税理士として現場に立ちながら、<span class="hl">「業界全体の生産性と価値を高めることで、中小企業をより深く支えることはできないか」</span>という問いを抱いてまいりました。</p>
+
+          <p>税理士事務所は、中小企業にとって<span class="hl">"最後の拠り所"</span>とも言える存在です。しかし、日々の業務に追われ、本来向き合うべき支援に十分な時間を割けていない現実があります。</p>
+
+          <p>当初、私はAIによって業務を効率化し、時間を取り戻すことで、本来の役割に集中できる環境を実現したいと考えていました。実際に、記帳やチェック、資料作成といった業務は着実に軽減され、AIは現場において価値発揮を後押しする存在として活躍しています。</p>
+
+          <p>その一方で、<span class="hl">AIの進化は、もはや私の想定をはるかに超える領域に入ってきました。</span>いまやAIは、単なる効率化の道具にとどまらず、税理士業務そのものの一部を担い得る段階に入りつつあります。これは大きな可能性であると同時に、これまでの延長線上にいるだけでは立ち行かなくなるという現実も示しています。</p>
+
+          <p>だからこそ今、私たちは業務を効率化するだけでなく、<span class="hl">自らの役割そのものを見つめ直し、仕事のあり方を変えていく必要があります。</span>AIに任せられる業務はAIに任せる。そのうえで私たちは、人にしかできない領域へと軸足を移していく。お客様の未来に向き合い、経営課題に寄り添い、事業の成長を支える——そうした本質的な役割に、これまで以上に力を注いでいくことが重要だと考えています。</p>
+
+          <p>AIの進化を前に、不安や戸惑いを感じている方もいらっしゃるかもしれません。私自身、決してITに精通していたわけではありません。だからこそ、誰もが現場で無理なくAIを活用し、この変化に対応できる環境が必要だと考え、本サロンを立ち上げました。本サロンでは、やさしく、現場目線で、実務にまで落とし込むことを大切にしています。同じ志を持つ仲間とともに、実践を重ねながら成長していける場でありたいと考えています。</p>
+
+          <div class="greeting-vision">
+            <p>税理士一人ひとりがAIを活用し、提供できる価値を高めていく。その積み重ねが中小企業を支え、企業の成長につながり、<span class="hl-gold">やがて社会全体を前へと動かしていく</span>——私はそう信じています。</p>
+          </div>
+
+          <p>変化は、すでに始まっています。その変化をどう捉え、どう行動するかは、私たち自身に委ねられています。</p>
+
+          <p class="greeting-closing">AIに対する不安があっても問題ありません。その不安を抱えたままでも、一歩を踏み出すことにこそ意味があります。<br>ぜひ、新たな仲間として、ともにこの変化を前向きに捉え、未来を切り拓いていきましょう。<br>皆さまのご参加を、心よりお待ちしております。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑨ コンセプト ===================== -->
 <section id="concept">
   <div class="container">
     <div class="section-header">
@@ -1858,50 +1889,7 @@
   </div>
 </section>
 
-<!-- ===================== ⑥ サービスの流れ ===================== -->
-<section id="flow">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Service Flow</span>
-      <div class="silver-line"></div>
-      <h2 class="section-title">入会後のサービスの流れ</h2>
-    </div>
-    <div class="flow-intro-box reveal">
-      <p>入会時のAIスキルは問いません。チェックリストで現在地を確認し、<strong>あなたのペースで着実に進んでいけます。</strong></p>
-    </div>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-step-num reveal"><span>STEP</span><span>1</span></div>
-        <div class="flow-step-body reveal reveal-delay-1">
-          <div class="flow-step-sub">入会1ヶ月目</div>
-          <div class="flow-step-title">スターターガイドのチェックリストで、<br>ゼロから確実にスタートを切る</div>
-          <div class="flow-step-text">入会後は「スターターガイドのチェックリスト」に沿って、AIの初期設定・セキュリティ設定・基本操作、そしてコミュニティ（Slack）の活用方法を順を追って習得します。事務局が丁寧にサポートするので、AIが初めての方でも安心してスタートできます。</div>
-          <span class="flow-level-tag">▶ AIをまだ触ったことがない方でも、リストに沿うだけで確実に始められます</span>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step-num reveal"><span>STEP</span><span>2</span></div>
-        <div class="flow-step-body reveal reveal-delay-1">
-          <div class="flow-step-sub">特別集中講座</div>
-          <div class="flow-step-title">絶対にAIを使えるようになる3週間<br>120分 × 全3回</div>
-          <div class="flow-step-text">「体験→習慣化→ビジョン」の3段階で、確実にAIを使いこなせる状態へ。理論は一切なし。当日、一緒に触ります。各回後の宿題をSlackに投稿することで、学習が定着します。</div>
-          <span class="flow-level-tag">▶ 少し触ったことがある方も、確実に使いこなせる状態へ</span>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-step-num reveal"><span>STEP</span><span>3</span></div>
-        <div class="flow-step-body reveal reveal-delay-1">
-          <div class="flow-step-sub">ワークシフト講座</div>
-          <div class="flow-step-title">「お金のお医者さん」として<br>活躍するための設計</div>
-          <div class="flow-step-text">AIを使いこなせるようになった先に、さらなるステップがあります。財務コンサル・節税提案・金融商品活用を通じて、顧問先から真に頼られる存在へ。新しい形の付加価値を生み出す実践講座です。</div>
-          <span class="flow-level-tag">▶ すでに使いこなしている方は、ここから一気に加速</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== ⑦ 特別集中講座 ===================== -->
+<!-- ===================== ⑩ 特別集中講座 ===================== -->
 <section id="seminar">
   <div class="seminar-bg-glow"></div>
   <div class="container">
@@ -1962,44 +1950,50 @@
   </div>
 </section>
 
-<!-- ===================== ⑧ コミュニティの魅力 ===================== -->
-<section id="community">
+<!-- ===================== ⑪ 入会ステップ ===================== -->
+<section id="flow">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Community</span>
+      <span class="section-label">Service Flow</span>
       <div class="silver-line"></div>
-      <h2 class="section-title">このサロンで得られるもの</h2>
-      <p class="section-desc">学習は講座だけでは終わりません。仲間と一緒に研究し続けられる環境があります。</p>
+      <h2 class="section-title">入会後のサービスの流れ</h2>
     </div>
-    <div class="community-grid">
-      <div class="community-card reveal"><div class="community-card-icon">💼</div><div class="community-card-title">新しい働き方の設計</div><div class="community-card-text">財務コンサル・節税提案・金融商品活用で、顧問先から頼られる「お金のお医者さん」へ</div></div>
-      <div class="community-card reveal reveal-delay-1"><div class="community-card-icon">🌟</div><div class="community-card-title">運営パートナーとして活躍</div><div class="community-card-text">AI活用に慣れた方には、サロン運営パートナーとして即戦力で活躍いただける機会もあります</div></div>
-      <div class="community-card reveal reveal-delay-2"><div class="community-card-icon">🔬</div><div class="community-card-title">継続的なAI研究</div><div class="community-card-text">講座が終わっても、コミュニティでAI研究・最新事例の共有は続きます。学習は終わりません</div></div>
-      <div class="community-card reveal reveal-delay-3"><div class="community-card-icon">💬</div><div class="community-card-title">先生方同士のAI活用交流</div><div class="community-card-text">税理士同士だからこそ共有できる業務特化の活用事例。Slackで毎日活発に情報交換が行われています</div></div>
-      <div class="community-card reveal reveal-delay-4"><div class="community-card-icon">🛡️</div><div class="community-card-title">何でも聞けるサポート体制</div><div class="community-card-text">「こんなこと聞いていいのか」——全部大丈夫です。むしろ細かいほど面白い。誰が何を聞いても大丈夫な空気があります</div></div>
+    <div class="flow-intro-box reveal">
+      <p>入会時のAIスキルは問いません。チェックリストで現在地を確認し、<strong>あなたのペースで着実に進んでいけます。</strong></p>
     </div>
-
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-step-num reveal"><span>STEP</span><span>1</span></div>
+        <div class="flow-step-body reveal reveal-delay-1">
+          <div class="flow-step-sub">入会1ヶ月目</div>
+          <div class="flow-step-title">スターターガイドのチェックリストで、<br>ゼロから確実にスタートを切る</div>
+          <div class="flow-step-text">入会後は「スターターガイドのチェックリスト」に沿って、AIの初期設定・セキュリティ設定・基本操作、そしてコミュニティ（Slack）の活用方法を順を追って習得します。事務局が丁寧にサポートするので、AIが初めての方でも安心してスタートできます。</div>
+          <span class="flow-level-tag">▶ AIをまだ触ったことがない方でも、リストに沿うだけで確実に始められます</span>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num reveal"><span>STEP</span><span>2</span></div>
+        <div class="flow-step-body reveal reveal-delay-1">
+          <div class="flow-step-sub">特別集中講座</div>
+          <div class="flow-step-title">絶対にAIを使えるようになる3週間<br>120分 × 全3回</div>
+          <div class="flow-step-text">「体験→習慣化→ビジョン」の3段階で、確実にAIを使いこなせる状態へ。理論は一切なし。当日、一緒に触ります。各回後の宿題をSlackに投稿することで、学習が定着します。</div>
+          <span class="flow-level-tag">▶ 少し触ったことがある方も、確実に使いこなせる状態へ</span>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num reveal"><span>STEP</span><span>3</span></div>
+        <div class="flow-step-body reveal reveal-delay-1">
+          <div class="flow-step-sub">ワークシフト講座</div>
+          <div class="flow-step-title">「お金のお医者さん」として<br>活躍するための設計</div>
+          <div class="flow-step-text">AIを使いこなせるようになった先に、さらなるステップがあります。財務コンサル・節税提案・金融商品活用を通じて、顧問先から真に頼られる存在へ。新しい形の付加価値を生み出す実践講座です。</div>
+          <span class="flow-level-tag">▶ すでに使いこなしている方は、ここから一気に加速</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===================== ⑩ 受講者の声 ===================== -->
-<section id="voices">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Voices</span>
-      <div class="silver-line"></div>
-      <h2 class="section-title section-title-light">サロン会員様からの声</h2>
-    </div>
-    <div class="voices-grid">
-      <div class="voice-card reveal"><div class="voice-quote">"</div><div class="voice-text">今は心からAIに触れる機会を得て良かったと思ってます。5年以内にAIに適合した士業以外は市場からいなくなるレベルの進化を感じてます。きっかけを与えてくださり感謝です！</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">T.M 先生</div><div class="voice-role">税理士・40代</div></div></div></div>
-      <div class="voice-card reveal reveal-delay-1"><div class="voice-quote">"</div><div class="voice-text">そんなに深いところまでいかなくても、基礎知識とプロンプトさえあればけっこう業務に使えると実感しました。AIに置いていかれないよう、仲間の先生と一緒に学んでいきたいです。</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">K.S 先生</div><div class="voice-role">税理士・50代</div></div></div></div>
-      <div class="voice-card reveal reveal-delay-2"><div class="voice-quote">"</div><div class="voice-text">プロンプト次第で、経営分析シートがあのレベルで一瞬でできることに驚きました。付加価値の高い分野に注力できるよう時間を生み出すことが大切だと、改めて実感しています。</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">Y.H 先生</div><div class="voice-role">税理士・30代</div></div></div></div>
-      <div class="voice-card reveal reveal-delay-3"><div class="voice-quote">"</div><div class="voice-text">私の年代でAIを学ぶのは正直不安でしたが、スターターガイドに沿って自分のペースで着実に進めることができました。記帳から申告書作成までAI化して、後進に誇れる事務所を作るのが今の目標です。</div><div class="voice-author"><div class="voice-avatar">👤</div><div><div class="voice-name">S.H 先生</div><div class="voice-role">税理士・60代</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== ⑪ 料金 ===================== -->
+<!-- ===================== ⑫ 料金 ===================== -->
 <section id="pricing">
   <div class="container">
     <div class="section-header">
@@ -2049,7 +2043,7 @@
   </div>
 </section>
 
-<!-- ===================== ⑫ FAQ ===================== -->
+<!-- ===================== ⑬ FAQ ===================== -->
 <section id="faq">
   <div class="container">
     <div class="section-header">
@@ -2070,7 +2064,7 @@
   </div>
 </section>
 
-<!-- ===================== ⑬ CTA ===================== -->
+<!-- ===================== ⑭ 最終CTA ===================== -->
 <section id="cta">
   <div class="cta-bg-photo"></div>
   <div class="container cta-inner">
@@ -2082,9 +2076,9 @@
     </h2>
     <p class="cta-sub reveal">第1回は無料で体験いただけます。難しいことは何もありません。<br>どの回からでもご参加いただけます。お申し込み後、事務局より詳細をご案内いたします。</p>
     <div class="reveal">
-      <a href="https://zeirishi-ai-daigaku.github.io/workshift-seminar/" target="_blank" class="btn-cta-large">無料体験セミナーの詳細はこちら →</a>
+      <a href="https://zeirishi-ai-daigaku.github.io/workshift-seminar/" target="_blank" class="btn-cta-large">このコミュニティの学びを無料体験してみる →</a>
       <!-- ↑ 申込フォームURLに変更してください -->
-      <p class="cta-detail">4月13日（月）18:00〜20:00 ／ オンライン（Zoom）／ 事前準備不要</p>
+      <p class="cta-detail">【特別集中講座（全3回）】<br>第1回 4月13日（月）／ 第2回 4月20日（月）／ 第3回 5月12日（火）<br>各回 18:00〜20:00 ／ オンライン（Zoom）／ 事前準備不要</p>
     </div>
     <div class="cta-contact reveal">
       <p>税理士AI大学 事務局</p>
