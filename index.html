@@ -1336,8 +1336,8 @@
     }
     .cd-label {
       font-size: 9px; font-weight: 700;
-      letter-spacing: 0.22em;
-      color: rgba(200, 168, 80, 0.55);
+      letter-spacing: 0.15em;
+      color: rgba(200, 168, 80, 0.75);
     }
     .cd-display {
       display: flex; align-items: center; gap: 8px;
@@ -1502,7 +1502,7 @@
     <div class="countdown-inline reveal reveal-delay-1" id="countdown-star">
       <div class="cd-line"></div>
       <div class="cd-inner">
-        <div class="cd-label">無料体験の機会まで</div>
+        <div class="cd-label" id="cd-label">次の<span style="color:rgba(200,168,80,0.95);font-weight:900;">無料体験</span>の機会まで</div>
         <div class="cd-display">
           <span class="cd-ato">あと</span>
           <div class="cd-block">
@@ -1518,7 +1518,7 @@
             <span class="cd-unit">分</span>
           </div>
         </div>
-        <div class="cd-date">4.13 18:00 START</div>
+        <div class="cd-date" id="cd-date">4.13 18:00 START</div>
       </div>
       <div class="cd-line right"></div>
     </div>
@@ -2120,26 +2120,40 @@
     }
   })();
 
-  // カウントダウンタイマー（フリップアニメーション付き）
+  // カウントダウンタイマー（複数日程対応）
   (function() {
-    const target = new Date('2026-04-13T18:00:00+09:00');
+    const sessions = [
+      { dt: new Date('2026-04-13T18:00:00+09:00'), label: '4.13 18:00 START' },
+      { dt: new Date('2026-04-20T18:00:00+09:00'), label: '4.20 18:00 START' },
+    ];
     const pad = n => String(n).padStart(2, '0');
     let prev = { d: -1, h: -1, m: -1 };
 
     function flip(el, val) {
       el.classList.remove('flipping');
-      void el.offsetWidth; // reflow でアニメーションリセット
+      void el.offsetWidth;
       el.textContent = val;
       el.classList.add('flipping');
     }
 
+    function getNextSession() {
+      const now = new Date();
+      return sessions.find(s => s.dt > now) || null;
+    }
+
     function update() {
-      const diff = target - new Date();
-      if (diff <= 0) {
+      const session = getNextSession();
+      if (!session) {
         const box = document.getElementById('countdown-star');
         if (box) box.style.display = 'none';
         return;
       }
+
+      // 日付ラベル更新
+      const dateEl = document.getElementById('cd-date');
+      if (dateEl) dateEl.textContent = session.label;
+
+      const diff = session.dt - new Date();
       const d = Math.floor(diff / 86400000);
       const h = Math.floor((diff % 86400000) / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
